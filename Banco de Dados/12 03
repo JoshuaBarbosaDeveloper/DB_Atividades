@@ -1,0 +1,22 @@
+show databases; //Mostra os bancos instalados no sgbd
+
+use databases; //Onde "databases" serve para acessar um bancos
+
+show tables; //Mostra as tabelas disponíveis no banco
+
+select * from aluno; //Mostra tudo da tabela selecionada
+
+insert into aluno (idAluno, nome, data_nascimento) values ('1', 'Hugo', '2001-04-20'); //Insere no banco de dados
+
+delete from aluno where idaluno = 2; //Deletar
+
+select nome, data_nascimento from aluno where nome = 'Gustavinho'; //Mostra o que escolher
+
+update pet set nome_pet = 'Snoopy' where idpet = 1; //Edita a informação escholhida em uma determinada tabela
+
+Select * from livro order by titulo desc //Organiza por ordem alfabetica de trás para frente
+
+insert into emprestimo (data, livro_idlivro, aluno_idaluno) values ('2020-03-12', 1, 2); //Emprestar um livro
+
+select nome, titulo from emprestimo, aluno, livro where idaluno = aluno_idaluno
+and idlivro = livro_idlivro //Melhora a busca
